@@ -1,0 +1,17 @@
+/* Footer */
+.footer {
+  grid-area: ft;
+  color: white;
+  background-color: #056839;
+  text-align: center;
+}
+
+.social {
+  margin: 25px;
+}
+
+.copyright p {
+  font-weight: 100;
+  font-size: 13px;
+  font-style: italic;
+}

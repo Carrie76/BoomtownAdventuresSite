@@ -1,0 +1,293 @@
+@import "./DesignSystem.css";
+@import "./subscribe.css";
+@import "./footer.css";
+
+/* Desktop Screens: about 1000px and up */
+.container {
+  display: grid;
+  grid-template-columns: 800px 150px;
+  grid-template-rows: 185px 45px 525px 325px 135px 200px;
+  margin: auto;
+  justify-content: center;
+  background-color: rgb(207, 207, 207);
+  grid-template-areas:
+    "hd hd"
+    "tl tl"
+    "main nav"
+    "cards cards"
+    "sub sub"
+    "ft ft";
+}
+
+.boxes {
+  display: flex;
+  background-color: #ffffff;
+  padding: 2px;
+}
+/* ----- Main Logo ----- */
+#header {
+  grid-area: hd;
+  background-image: url("../images/Boomtown Adventures Logo_355x175.jpg");
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+}
+
+/* ----- Green Bar with Tag Line and Search Bar ----- */
+#tl {
+  grid-area: tl;
+  background-color: #056839;
+}
+  .Nestedtag {
+    display: grid;
+    padding: 7px;
+    flex-wrap: wrap;
+    grid-template-areas:
+      "tag search";
+  }
+/* ----- Tag Line in the green bar ----- */
+  #tag {
+    grid-area: tag;
+    color: #ffffff;
+    margin-top: -18px;
+    text-align: center;
+    font-style: italic;
+  }
+/* ----- Search box in the green bar ----- */
+  #search {
+    grid-area: search;
+  }
+
+/* ----- Navigation Bars (R Side) ----- */
+#nav {
+  grid-area: nav;
+  padding: 5px;
+  flex-wrap: wrap;
+  text-decoration: none; /* not blue, no underline */
+  color: #818285;
+}
+
+/* ----- Main Callout Area ----- */
+#main {
+  grid-area: main;
+  background-color: #ffffff;
+  justify-content: center;
+}
+  .NestedGrid1 {
+    display: grid;
+    grid-template-rows: 400px 110px;
+    padding: 4px;
+    grid-template-areas:
+    "photo"
+    "maintext";
+}
+  #mainphoto {
+    grid-area: photo;
+    background-image: url('../images/TheSpot_800x400.jpg');
+    justify-content: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+  #maintext {
+    grid-area: maintext;
+    font-size: 1.2em;
+}
+
+/* ----- Secondary Callout Area (with 4 Events) ----- */
+#cards {
+  grid-area: cards;
+}
+  .NestedGrid2 {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    grid-template-columns: 40px 205px 205px 205px 205px 40px;
+    grid-template-rows: 150px 95px 35px;  
+    grid-template-areas:
+    "arrowL pic1 pic2 pic3 pic4 arrowR"
+    "arrowL info1 info2 info3 info4 arrowR"
+    "arrowL more1 more2 more3 more4 arrowR";
+}
+  #arrowL {
+    grid-area: arrowL;
+    background-image: url('../images/Arrow_L_30w.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: scale-down;
+}
+  #photo1 {
+    grid-area: pic1;
+    background-image: url('https://visitlookoutmountain.com/wp-content/uploads/2017/11/Pete-the-Cat-7-23.png');
+    background-size: cover;
+}
+  #info1 {
+    grid-area: info1;
+}
+  #photo2 {
+    grid-area: pic2;
+    background-image: url('https://cdn.thecrazytourist.com/wp-content/uploads/2019/05/ccimage-shutterstock_204070453.jpg');
+    background-size: cover;
+}
+  #info2 {
+    grid-area: info2; 
+}
+  #photo3 {
+    grid-area: pic3;
+    background-image: url('https://cdn.thecrazytourist.com/wp-content/uploads/2019/05/Vintage-1989-1024x721.jpg');
+    background-size: cover;
+}
+  #info3 {
+    grid-area: info3; 
+}
+  #photo4 {
+    grid-area: pic4;
+    background-image: url('https://cdn.thecrazytourist.com/wp-content/uploads/2019/05/ccimage-Making-Ornament-Hook.jpg');
+    background-size: cover;
+}
+  #info4 {
+    grid-area: info4;
+}
+  #arrowR {
+    grid-area: arrowR;
+    background-image: url('../images/Arrow_R_30w.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: scale-down;
+}
+  #more1 {
+  grid-area: more1;
+}
+  #more2 {
+  grid-area: more2;
+}
+  #more3 {
+  grid-area: more3;
+}
+  #more4 {
+  grid-area: more4;
+}
+
+/* --------------------------------------------------------------- */
+
+/* ----- MEDIUM / Tablet Screens: 992px and less ----- */
+@media(max-width: 992px) {  
+.container {
+  grid-template-columns: 600px 165px;
+  grid-template-rows: 185px 45px 430px 540px 135px 200px;
+  grid-template-areas:
+    "hd hd"
+    "tl tl"
+    "main nav"
+    "cards nav"
+    "sub sub"
+    "ft ft";  
+  }
+  #tag {
+    font-size: .8em;
+    margin-top: -12px;
+  }
+  
+  /* ----- Main Callout Area ----- */
+  .NestedGrid1 {
+    grid-template-rows: 250px 110px;
+}
+  #mainphoto {
+    grid-area: photo;
+    background-image: url('../images/TheSpot_580x260.jpg');
+}
+  
+  /* ----- Secondary Callout Area ----- */
+  .NestedGrid2 {
+    grid-template-columns: 35px 235px 235px 35px;
+    grid-template-rows: 150px 55px 35px 150px 55px 35px;
+    grid-template-areas:
+      "arrowL pic1 pic2 arrowR"
+      "arrowL info1 info2 arrowR"
+      "arrowL more1 more2 arrowR"
+      "arrowL pic3 pic4 arrowR"
+      "arrowL info3 info4 arrowR"
+      "arrowL more3 more4 arrowR";
+  }
+  } 
+
+/* --------------------------------------------------------------- */
+
+/* ----- SMALL / Mobile Screens: 400px and less ----- */
+@media(max-width: 400px){
+h2 {
+  font-size: 1em;
+}  
+
+ul {
+  font-size: .9em;
+  padding:0px;
+}
+
+.container {
+  grid-template-columns: 205px 100px;
+  grid-template-rows: 145px 65px 475px 580px 185px 200px;
+  grid-template-areas:
+    "hd hd"
+    "tl tl"
+    "main nav"
+    "cards cards"
+    "sub sub"
+    "ft ft";  
+  }
+  #header {
+    background-image: url('../images/Boomtown\ Adventures\ Logo_305x140.jpg');
+    object-fit: contain;
+  }
+  .Nestedtag {
+    display: grid;
+    padding: 7px;
+    flex-wrap: wrap;
+  }
+  #tag {
+    font-size: .8em;
+    margin-top: -18px;
+}
+
+  /* ----- Main Callout Area ----- */
+  #NestedGrid1 {
+    grid-template-rows: 130px 110px;
+  }
+  #maintext {
+    font-size: 1em;
+}
+  #mainphoto {
+    grid-area: photo;
+    background-image: url('../images/TheSpot_193x130.jpg');
+    border: 2px solid blue;
+}
+  
+  /* ----- Secondary Callout Area ----- */
+  .NestedGrid2 {
+    grid-template-columns: 30px 112px 112px 30px;
+    grid-template-rows: 100px 135px 30px 100px 135px 30px;
+    gap: 4px;
+  }
+    #arrowL {
+    background-image: url('../images/Arrow_L_15w.jpg');
+  }
+    #arrowR {
+    background-image: url('../images/Arrow_R_15w.jpg');
+  }
+  #more1 {
+    margin-left: 0px;
+    object-fit: scale-down;
+  }
+    #more2 {
+    margin-left: 0px;
+    width: 112px;
+  }
+    #more3 {
+    margin-left: 0px;
+  }
+    #more4 {
+    margin-left: 0px;
+  }
+  }
+  
+  
