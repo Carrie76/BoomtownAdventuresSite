@@ -1,0 +1,190 @@
+@import "./DesignSystem.css";
+@import "./subscribe.css";
+@import "./footer.css";
+
+/* Desktop Screens: about 1000px and up */
+.container {
+  display: grid;
+  grid-template-columns: 800px 150px;
+  grid-template-rows: 185px 45px 1fr 135px 200px;
+  margin: auto;
+  justify-content: center;
+  background-color: rgb(207, 207, 207);
+  grid-template-areas:
+    "hd hd"
+    "tl tl"
+    "main nav"
+    "sub sub"
+    "ft ft";
+}
+
+.boxes {
+  display: flex;
+  background-color: #ffffff;
+  padding: 2px;
+}
+/* ----- Main Logo ----- */
+#header {
+  grid-area: hd;
+  background-image: url("../images/Boomtown Adventures Logo_355x175.jpg");
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+}
+
+/* ----- Green Bar with Tag Line and Search Bar ----- */
+#tl {
+  grid-area: tl;
+  background-color: #056839;
+}
+  .Nestedtag {
+    display: grid;
+    padding: 7px;
+    flex-wrap: wrap;
+    grid-template-areas:
+      "tag search";
+  }
+/* ----- Tag Line in the green bar ----- */
+  #tag {
+    grid-area: tag;
+    color: #ffffff;
+    margin-top: -18px;
+    text-align: center;
+    font-style: italic;
+  }
+/* ----- Search box in the green bar ----- */
+  #search {
+    grid-area: search;
+  }
+
+/* ----- Navigation Bars (R Side) ----- */
+#nav {
+  grid-area: nav;
+  padding: 5px;
+  flex-wrap: wrap;
+  text-decoration: none; /* not blue, no underline */
+  color: #818285;
+}
+
+/* ----- Main Callout Area ----- */
+#main {
+  grid-area: main;
+  background-color: #ffffff;
+}
+.NestedGrid1 {
+  display: grid;
+  grid-template-columns: 150px 640px;
+  grid-template-rows: 75px 230px 1fr 85px ;
+  background-color: #ffffff;
+  grid-template-areas:
+  "eventtitle eventtitle"
+  "eventphoto eventphoto"
+  "eventinfo eventinfo"
+  "summary summary"
+  "review review"
+  "authorpic authorinfo";
+}
+#eventtitle {
+  grid-area: eventtitle;
+  font-size: 2em;
+  margin-top: -40px;
+  padding: 5px;
+}
+#eventphoto {
+  grid-area: eventphoto;
+  background-image: url("../images/Pete_Blog_Pic_L.jpg");
+  background-repeat: no-repeat;
+}
+#eventinfo {
+  grid-area: eventinfo;
+  padding: 5px;
+}
+#summary {
+  grid-area: summary;
+  padding: 5px;
+}
+#review {
+  grid-area: review;
+  padding: 5px;
+}
+
+/* Author's info Box */
+#authorpic {
+grid-area: authorpic;
+padding: 5px;
+vertical-align: middle;
+}
+#authorinfo {
+grid-area: authorinfo;
+}
+
+.subscribe {
+grid-area: sub;
+}
+#footer {
+grid-area: ft;
+}
+
+/* --------------------------------------------------------------- */
+
+/* ----- MEDIUM / Tablet Screens: 992px and less ----- */
+@media(max-width: 992px) {  
+  .container {
+    grid-template-columns: 600px 150px;
+    grid-template-rows: 185px 45px 1fr 135px 200px; 
+  }
+  #tag {
+    font-size: .8em;
+    margin-top: -12px;
+  }
+  
+  /* ----- Main Callout Area ----- */
+  #main {
+    width: 600px;
+}
+.NestedGrid1 {
+  display: grid;
+  grid-template-columns: 150px 420px;
+  grid-template-rows: 75px 230px 1fr 85px ;
+}
+} 
+
+/* --------------------------------------------------------------- */
+
+/* ----- SMALL / Mobile Screens: 400px and less ----- */
+@media(max-width: 400px){
+  h2 {
+    font-size: 1em;
+  }  
+
+  ul {
+    font-size: .9em;
+    padding:0px;
+  }
+
+  .container {
+    grid-template-columns: 205px 100px;
+    grid-template-rows: 145px 65px 1fr 185px 200px;
+  }
+  #header {
+    background-image: url('../images/Boomtown\ Adventures\ Logo_305x140.jpg');
+    object-fit: contain;
+  }
+  .Nestedtag {
+    display: grid;
+    padding: 7px;
+    flex-wrap: wrap;
+  }
+  #tag {
+    font-size: .8em;
+    margin-top: -18px;
+}
+
+  /* ----- Main Callout Area ----- */
+  #main {
+    width: 200px;
+}  
+}
+  
+  

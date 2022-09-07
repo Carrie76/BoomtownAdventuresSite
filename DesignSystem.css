@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'restaurants_scriptmedium';
+    src: url('../fonts/restaurants_script-webfont.woff2') format('woff2'),
+         url('../fonts/restaurants_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: restaurants_scriptmedium;
+  color: white;
+}
+h2 {
+  font-size: 1.5em;
+  font-family: restaurants_scriptmedium;
+  color:#818285;
+}
+h3 {
+  font-weight: 100;
+  font-size: 1.2em;
+  color: white;
+  font-style: italic;
+}
+h4 {
+  font-weight: 100;
+  font-size: 1.5em;
+  font-style: italic;
+  color:#818285;
+  margin-bottom: -25px;
+}
+h5 {
+  font-weight: 100;
+  font-size: 11pt;
+  color:#818285;
+  margin-bottom: 12px;
+}
+h6 {
+  font-weight: 100;
+  font-size: 10pt;
+  color:#818285;
+  font-style: italic;
+  margin-bottom: -23px;
+}
+
+ul {
+  margin-left: -15px;
+}
+
+figcaption {
+  font-weight: 100;
+  font-size: .9em;
+  text-align: right;
+  color: #818285;
+  font-style: italic;
+}
+blockquote {
+  color: #818285;
+  font-style: italic;
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(207, 207, 207);
+}
+
+  
+.button {
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  #button1 {
+    background-color: #818285;
+    font-style: italic;
+    color: white;
+    align-items: right;
+  }
+  
+  #button1:hover {
+    background-color: #056839;
+    color: white;
+  }
+  
+  #button2 {
+    background-color: white;
+    color: #056839;
+    border: 2px solid #056839;
+  }
+  
+  #button2:hover {
+    background-color: #056839;
+    color: white;
+  }
+
+  #button3 {
+    background-color: #056839;
+    font-style: italic;
+    color: white;
+  }
+  
+  #button3:hover {
+    background-color: #818285;
+    color: white;
+  }
+
+  .block {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  #button4 {
+    background-color: #056839;
+    font-style: italic;
+    color: white;
+  }
+  
+  #button4:hover {
+    background-color: #818285;
+    color: white;
+  }
