@@ -53,6 +53,7 @@ figcaption {
   text-align: right;
   color: #818285;
   font-style: italic;
+  margin-top: -15px;
 }
 blockquote {
   color: #818285;
