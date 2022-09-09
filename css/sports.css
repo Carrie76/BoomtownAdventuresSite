@@ -108,15 +108,15 @@
   ul {
     font-size: .9em;
     padding:0px;
-  }
+    margin-left: 15px;
+  }  
 
   .container {
-    grid-template-columns: 205px 100px;
-    grid-template-rows: 145px 65px 460px 580px 185px 200px; 
+    grid-template-columns: 215px 85px;
+    grid-template-rows: 145px 65px 520px 185px 200px; 
   }
   #header {
-    background-image: url('../images/Boomtown\ Adventures\ Logo_305x140.jpg');
-    object-fit: contain;
+    background-size: contain;
   }
   .Nestedtag {
     display: grid;
@@ -130,7 +130,7 @@
 
   /* ----- Main Callout Area ----- */
   #main {
-    width: 205px;
+    width: 215px;
 }  
 }
   

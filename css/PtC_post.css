@@ -6,9 +6,8 @@
 .container {
   display: grid;
   grid-template-columns: 800px 150px;
-  grid-template-rows: 185px 45px 450px 135px 200px;
+  grid-template-rows: 185px 45px 1fr 135px 200px;
   margin: auto;
-  justify-content: center;
   background-color: rgb(207, 207, 207);
   grid-template-areas:
     "hd hd"
@@ -70,21 +69,76 @@
 /* ----- Main Callout Area ----- */
 #main {
   grid-area: main;
-  grid-template-columns: 795px;
-  grid-template-rows: 450px;
-  background-image: url("../images/Map_Pic_L.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
   background-color: #ffffff;
+}
+.NestedGrid1 {
+  display: grid;
+  grid-template-columns: 150px 640px;
+  grid-template-rows: 75px 230px 5px 200px 50px 75px 205px;
+  background-color: #ffffff;
+  grid-template-areas:
+  "eventtitle eventtitle"
+  "eventphoto eventphoto"
+  "caption caption"
+  "eventinfo eventinfo"
+  "summary summary"
+  "review review"
+  "authorpic authorinfo";
+}
+#eventtitle {
+  grid-area: eventtitle;
+  font-size: 2em;
+  margin-top: -40px;
+  padding: 5px;
+}
+#eventphoto {
+  grid-area: eventphoto;
+  background-image: url("../images/Pete_Blog_Pic_L.jpg");
+  background-repeat: no-repeat;
+}
+#caption {
+  grid-area: caption;
+  justify-items: right;
+  margin-top: -25px;
+}
+#eventinfo {
+  grid-area: eventinfo;
+  padding: 5px;
+  
+}
+#summary {
+  grid-area: summary;
+  padding: 5px;
+}
+#review {
+  grid-area: review;
+  padding: 5px;
+}
+
+/* Author's info Box */
+#authorpic {
+grid-area: authorpic;
+padding: 5px;
+vertical-align: middle;
+}
+#authorinfo {
+grid-area: authorinfo;
+}
+
+.subscribe {
+grid-area: sub;
+}
+#footer {
+grid-area: ft;
 }
 
 /* --------------------------------------------------------------- */
 
 /* ----- MEDIUM / Tablet Screens: 992px and less ----- */
-@media(max-width: 992px) {  
+@media(max-width: 992px) and (min-width: 401px) {  
   .container {
     grid-template-columns: 600px 150px;
-    grid-template-rows: 185px 45px 400px 135px 200px;
+    grid-template-rows: 185px 45px 1fr 135px 200px;
   }
   #tag {
     font-size: .8em;
@@ -93,8 +147,14 @@
   
   /* ----- Main Callout Area ----- */
   #main {
-    width: 598px;
-    background-image: url("../images/Map_Pic_M.jpg");
+    width: 600px;
+}
+.NestedGrid1 {
+  grid-template-columns: 150px 420px;
+  grid-template-rows: 75px 230px 5px 250px 75px 75px 225px;
+}
+#eventphoto {
+  background-image: url("../images/Pete_Blog_Pic_M.jpg");
 }
 } 
 
@@ -102,19 +162,19 @@
 
 /* ----- SMALL / Mobile Screens: 400px and less ----- */
 @media(max-width: 400px){
-h2 {
-  font-size: 1em;
-}  
+  h2 {
+    font-size: 1em;
+  }  
 
-ul {
-  font-size: .9em;
-  padding:0px;
-  margin-left: 15px;
-}
+  ul {
+    font-size: .9em;
+    padding:0px;
+    margin-left: 15px;
+  }
 
   .container {
     grid-template-columns: 215px 85px;
-    grid-template-rows: 145px 65px 490px 580px 185px 200px; 
+    grid-template-rows: 145px 65px 1fr 185px 200px;
   }
   #header {
     background-size: contain;
@@ -132,8 +192,31 @@ ul {
   /* ----- Main Callout Area ----- */
   #main {
     width: 215px;
-    background-image: url("../images/Map_Pic_S.jpg");
-}  
+}
+.NestedGrid1 {
+  grid-template-columns: 210px;
+  grid-template-rows: 55px 170px 15px 530px 225px 225px 95px 310px;
+  grid-template-areas:
+    "eventtitle"
+    "eventphoto"
+    "caption"
+    "eventinfo"
+    "summary"
+    "review"
+    "authorpic"
+    "authorinfo";
+}
+  #eventtitle {
+    font-size: 1.8em;
+    margin-top: -20px;
+  }  
+  #eventphoto {
+    background-image: url("../images/Pete_Blog_Pic_S.jpg");
+    background-size: contain;
+  }
+  #summary {
+    font-size: .8em;
+  }
 }
   
   

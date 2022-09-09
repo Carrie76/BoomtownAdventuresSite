@@ -121,6 +121,7 @@
 @media(max-width: 992px) {  
   .container {
     grid-template-columns: 600px 150px;
+    grid-template-rows: 185px 45px 1fr 135px 200px;
   }
   #tag {
     font-size: .8em;
@@ -132,8 +133,8 @@
     width: 600px;
 }
 .NestedGrid1 {
-  grid-template-columns: 150px 430px;
-  grid-template-rows: 50px 215px 310px 245px ;
+  grid-template-columns: 150px 420px;
+  grid-template-rows: 50px 230px 310px 245px;
 }
 } 
 
@@ -148,15 +149,15 @@
   ul {
     font-size: .9em;
     padding:0px;
+    margin-left: 15px;
   }
 
   .container {
-    grid-template-columns: 205px 100px;
-    grid-template-rows: 145px 65px 1fr 185px 200px;
+    grid-template-columns: 215px 85px;
+    grid-template-rows: 145px 65px 1260px 185px 200px; 
   }
   #header {
-    background-image: url('../images/Boomtown\ Adventures\ Logo_305x140.jpg');
-    object-fit: contain;
+    background-size: contain;
   }
   .Nestedtag {
     display: grid;
@@ -170,15 +171,24 @@
 
   /* ----- Main Callout Area ----- */
   #main {
-    width: 200px;
+    width: 215px;
 }  
 .NestedGrid1 {
-  grid-template-columns: 70px 130px;
-  grid-template-rows: 50px 300px 400px 350px ;
-}
-#authorpic {
-  scale: 60%;
-}
+  grid-template-columns: 210px;
+  grid-template-rows: 30px 400px 400px 95px 310px;
+  grid-template-areas:
+    "tyhead"
+    "tytext"
+    "eventform"
+    "authorpic"
+    "authorinfo";
+  }
+  #tytext {
+    font-size: .9em;
+  }
+  #authorpic {
+    scale: 60%;
+  }
 
 }
   

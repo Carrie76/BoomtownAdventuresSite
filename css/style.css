@@ -222,10 +222,11 @@ h2 {
 ul {
   font-size: .9em;
   padding:0px;
+  margin-left: 15px;
 }
 
 .container {
-  grid-template-columns: 205px 100px;
+  grid-template-columns: 215px 85px;
   grid-template-rows: 145px 65px 475px 580px 185px 200px;
   grid-template-areas:
     "hd hd"
@@ -236,8 +237,7 @@ ul {
     "ft ft";  
   }
   #header {
-    background-image: url('../images/Boomtown\ Adventures\ Logo_305x140.jpg');
-    object-fit: contain;
+    background-size: contain;
   }
   .Nestedtag {
     display: grid;
@@ -251,15 +251,13 @@ ul {
 
   /* ----- Main Callout Area ----- */
   #NestedGrid1 {
-    grid-template-rows: 130px 110px;
+    grid-template-rows: 125px 110px;
   }
   #maintext {
     font-size: 1em;
 }
   #mainphoto {
-    grid-area: photo;
-    background-image: url('../images/TheSpot_193x130.jpg');
-    border: 2px solid blue;
+    background-image: url('../images/TheSpot_S.jpg');
 }
   
   /* ----- Secondary Callout Area ----- */
@@ -289,5 +287,3 @@ ul {
     margin-left: 0px;
   }
   }
-  
-  
